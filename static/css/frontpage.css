@@ -1,0 +1,18 @@
+.home-chat-container {
+  /* border: 1px solid #000000; */
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.frontpage-chat-card {
+  height: 200px;
+  /* border: 1px solid black; */
+  width: 400px;
+  display: flex;
+  justify-content: center;
+
+}

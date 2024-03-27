@@ -1,0 +1,17 @@
+.chatapp-chat-container {
+  height: 500px;
+  border: 1px solid black;
+  display: flex;
+  flex-direction: row;
+  gap: 100px;
+  padding: 10px;
+}
+
+.chatapp-header {
+  display: flex;
+  gap: 10px;
+}
+
+.chatapp-body {
+  height: 70%;
+}

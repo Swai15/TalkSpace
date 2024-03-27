@@ -1,0 +1,36 @@
+{% extends 'main/base.html' %}
+
+{% block title %}
+Friends |
+{% endblock %}
+
+{% block content %}
+<div class="chatapp-chat-container">
+  <div class="chatapp-left-container">
+    <h3>Participants</h3>
+    <ul>
+      <li>participant 1</li>
+      <li>participant 2</li>
+      <li>participant 3</li>
+    </ul>
+  </div>
+
+  <div class="chatapp-right-container">
+    <div class="chatapp-header">
+      <p>pfp</p>
+      <p>pfp</p>
+      <p>pfp</p>
+      <p>pfp</p>
+    </div>
+
+    <div class="chatapp-body">
+      <p>Rest of chat</p>
+    </div>
+
+    <div>
+      <input type="text" name="friendMessage" placeholder="Enter a message...">
+      <button class="btn btn-secondary">Send</button>
+    </div>
+  </div>
+</div>
+{% endblock %}

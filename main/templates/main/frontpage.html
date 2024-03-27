@@ -5,8 +5,15 @@ Welcome |
 {% endblock %}
 
 {% block content %}
-<div>
-  <h1>Chat with friends</h1>
-  <h1>Chat in rooms</h1>
+<div class="home-chat-container">
+  <div class="frontpage-chat-card">
+    <a href="{% url 'chatpage' %}">
+      <h3>Chat with friends</h3>
+    </a>
+  </div>
+
+  <div class="frontpage-chat-card">
+    <h3>Chat in rooms</h3>
+  </div>
 </div>
 {% endblock %}
