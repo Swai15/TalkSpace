@@ -1,0 +1,48 @@
+{% extends 'main/base.html' %}
+
+{% block title %}
+Signup |
+{% endblock title %}
+
+{% block content %}
+<div class="signup-container">
+
+  <div>
+    <h1>Signup</h1>
+  </div>
+  <form>
+    <div class="mb-3">
+      <label for="email" class="form-label">Email address</label>
+      <input type="email" name="email" class="form-control" id="email" aria-describedby="emailHelp">
+      <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+    </div>
+
+    <div class="mb-3">
+      <label for="username" class="form-label">Username</label>
+      <input type="text" class="form-control" id="username">
+    </div>
+
+    <div class="mb-3">
+      <label for="password1" class="form-label">Password</label>
+      <input type="password" name="password1" class="form-control" id="password1">
+    </div>
+
+    <div class="mb-3">
+      <label for="exampleInputPassword1" class="form-label">Password</label>
+      <input type="password" name="password2" class="form-control" id="password2">
+    </div>
+
+    <!-- <div class="mb-3 form-check">
+      <input type="checkbox" class="form-check-input" id="exampleCheck1">
+      <label class="form-check-label" for="exampleCheck1">Check me out</label>
+    </div> -->
+    <div class="signup-buttons mt-4 mb-3">
+      <div class="mb-3">
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </div>
+      <div class="mb-3">Already have an account? <a href="{% url 'login' %}">Login</a></div>
+    </div>
+  </form>
+</div>
+
+{% endblock content %}

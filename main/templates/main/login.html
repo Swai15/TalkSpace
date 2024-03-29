@@ -1,0 +1,47 @@
+{% extends 'main/base.html' %}
+
+{% block title %}
+Login |
+{% endblock title %}
+
+{% block content %}
+<div class="login-container">
+
+  <div>
+    <h1>Login</h1>
+  </div>
+  <form method="POST" action="{% url 'login' %}">
+    {% csrf_token %}
+    <div class="mb-3">
+      <label for="username" class="form-label">Username</label>
+      <input type="text" name="username" placeholder="Johndoe" class="form-control" id="username"
+        aria-describedby="emailHelp">
+    </div>
+
+    <div class="mb-3">
+      <label for="password" class="form-label">Password</label>
+      <input type="password" name="password" class="form-control" id="password">
+    </div>
+
+    <div class="signup-buttons mt-4 mb-3">
+      <div class="mb-3">
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </div>
+      <div class="mb-3">Don't have an account? <a href="{% url 'signup' %}">Signup</a></div>
+    </div>
+
+    {% if form.errors %}
+    {% for field in form %}
+    {% for error in field.errors %}
+    <div class="mt-4 mb-3">
+      <p>{{ error|escape }}</p>
+    </div>
+    {% endfor %}
+    {% endfor %}
+    {% endif %}
+
+
+  </form>
+</div>
+
+{% endblock content %}

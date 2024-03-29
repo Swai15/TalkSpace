@@ -5,15 +5,32 @@ Welcome |
 {% endblock %}
 
 {% block content %}
+{% if request.user.is_authenticated %}
+
 <div class="home-chat-container">
   <div class="frontpage-chat-card">
     <a href="{% url 'chatpage' %}">
       <h3>Chat with friends</h3>
     </a>
   </div>
+  {% else %}
+  <div class="home-chat-container">
+    <div class="frontpage-chat-card">
+      <a href="{% url 'chatpage' %}">
+        <a href="{% url 'login' %}">
+          <h3>Login to chat with friends</h3>
+        </a>
+      </a>
+    </div>
 
-  <div class="frontpage-chat-card">
-    <h3>Chat in rooms</h3>
+    {% endif %}
+
+    <div class="frontpage-chat-card">
+      <a href="{% url 'roompage' %}">
+        <h3>Chat in rooms</h3>
+      </a>
+
+
+    </div>
   </div>
-</div>
-{% endblock %}
+  {% endblock %}
